@@ -3,67 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trellor</title>
+    <title>trello</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <img class="logo" src="" alt="">
+        <a href="#" class="header-left">
+            <img src="" alt="logo">
         <h1>Trello</h1>
-        <div class="div-header">
-            <img class="icono-person" src="./images/person-circle.svg" alt="">
+        </a>
+        <div class="header-right">
+            <img src="" alt="foto de Perfil">
             <ul>
-                <li></li>
-                <li></li>
+                <li>configiracion</li>
+                <li>salir</li>
             </ul>
         </div>
     </header>
     <main>
-        <div>
-            <form>
+        <div id="cont-regis" class="cont-regis">
+            <section id="sect-login">
                 <h2>Iniciar Sesion</h2>
-                <label for="email">
-                    <span>correo</span>
-                    <input type="email" id="email" required>
-                </label>
-                <label for="password">
-                    <span>contraseña</span>
-                    <input id="password" type="password">
-                </label>
-                <button type="submit" id="button">Iniciar Sesion</button>
-                <label for="button">
-                    <span>error</span>
-                </label>
-            </form>
-            <form>
+                <form>
+                    <label>
+                        <span>Correo</span>
+                        <input type="email" name="correo" id="inputEmail" required>
+                    </label>
+                    <label>
+                        <span>Contraseña</span>
+                        <input id="inputPass" type="password" required>
+                    </label>
+                    <button>Iniciar Sesion</button>
+                </form>
+                <p class="error-p"></p>
+                <a href="#" id="linkToSignIn">no tengo cuenta</a>
+            </section>
+
+            <!-- segundo form -->
+            <section id="sect-regis">
                 <h2>Registrarse</h2>
-                <label for="nombre">
-                    <span>Nombre</span>
-                    <input id="nombre" type="text" required>
-                </label>
-                <label for="apellido">
-                    <span>Apellido</span>
-                    <input id="apellido" type="text" required>
-                </label>
-                <label for="edad">
-                    <span>Edad</span>
-                    <input id="edad" type="number" required>
-                </label>
-                <label for="correo">
-                    <span>Email</span>
-                    <input id="correo" type="email" required>
-                </label>
-                <label for="contraseña">
-                    <span>Contraseña</span>
-                    <input id="contraseña" type="password" required>
-                </label>
-                <label for="confirmar-contraseña">
-                    <span>Comfirmar Contraseña</span>
-                    <input id="Comfirmar Contraseña" type="password" required>
-                </label>
-            </form>
-            <form></form>
+                <form>
+                    <label>
+                        <span>Nombre</span>
+                        <input type="text" name="nombre" id="inputName" required minlength="3" maxlength="20">
+                    </label>
+
+                    <label>
+                        <span>Apellido</span>
+                        <input type="text" name="apellido" id="lastName" required minlength="3" maxlength="20">
+                    </label>
+
+
+                    <label>
+                        <span>Edad</span>
+                        <input type="number" name="edad" id="inputAge" required min="10">
+                    </label>
+
+                    <label>
+                        <span>Email</span>
+                        <input type="email" name="correo" id="inputReEmail" required>
+                    </label>
+
+                    <label>
+                        <span>Contraseña</span>
+                        <input type="password" name="Contraseña" id="inputRegPass" required >
+                    </label>
+
+                    <label>
+                        <span>Comfirmar Contraseña</span>
+                        <input type="password" name="Contraseña" id="inputRegPassConfirm" required>
+                    </label>
+                    <button type="submit">Registrarse</button>
+                </form>
+                <p class="error-p"></p>
+                <a href="#" id="linkToSignIn">no tengo cuenta</a>
+            </section>
+            <section id="sect-photo">
+                <h2>Foto de Perfil</h2>
+                <form>
+                    <img src="" alt="foto de perfil">
+                    <button type="button" id="btnPhoto">Cambiar foto</button>
+                    <div>
+                        <button type="button">Cancelar</button>
+                        <button type="button">Guardar</button>
+                    </div>
+                </form>
+            </section>
         </div>
     </main>
+    <script src="./index.js"></script>
 </body>
 </html>
